@@ -1,0 +1,20 @@
+<div class="graph">
+  {{#each this.nodes as |node|}}
+    <div style={{node.style}}>
+      <LinkTo @route={{@route}} @model={{node.id}}>
+        {{node.label}}
+      </LinkTo>
+    </div>
+  {{/each}}
+  <svg
+    width={{this.svgWidth}}
+    height={{this.svgHeight}}
+    {{did-insert this.draw @nodes @steps}}
+  >
+    <g stroke="black">
+      {{#each this.steps as |step|}}
+        <polyline points={{step}} fill="none"></polyline>
+      {{/each}}
+    </g>
+  </svg>
+</div>

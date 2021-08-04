@@ -5,6 +5,16 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
     // Add options here
+    autoImport: {
+      webpack: {
+        resolve: {
+          fallback: {
+            fs: false,
+            path: false,
+          }
+        }
+      },
+    },
   });
 
   /*
