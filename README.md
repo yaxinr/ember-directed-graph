@@ -1,7 +1,7 @@
 ember-directed-graph
 ==============================================================================
 
-[Short description of the addon.]
+Using [degre](https://github.com/dagrejs) for layout directed graph with link to route at nodes (@route/node.id)
 
 
 Compatibility
@@ -23,7 +23,24 @@ ember install ember-directed-graph
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```js
+import Route from '@ember/routing/route';
+export default class StagesMapRoute extends Route {
+    model() {
+        return {
+            nodes: [{ id: '1', label: `first` },{ id: '2', label: `second` }],
+            steps: [{start:'1', finish:'2'}]
+        }
+    }
+}
+```
+```hbs
+<DirectedGraph
+  @nodes={{this.model.nodes}}
+  @steps={{this.model.steps}}
+  @route="stage"
+/>
+```
 
 
 Contributing

@@ -1,7 +1,7 @@
 {
   "name": "ember-directed-graph",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Using degre in emberjs for layout directed graph with link to route at nodes",
   "keywords": [
     "ember-addon"
   ],
