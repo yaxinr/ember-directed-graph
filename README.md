@@ -1,7 +1,7 @@
 ember-directed-graph
 ==============================================================================
 
-Using [degre](https://github.com/dagrejs) for layout directed graph with link to route at nodes (@route/node.id)
+Using [dagre](https://github.com/dagrejs) for draw directed graph with link to route at nodes (@route/node.id)
 
 
 Compatibility
